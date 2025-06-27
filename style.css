@@ -339,3 +339,39 @@ body > p {
 .container, #featured-projects > div, #skills-experience ul, #contact ul {
   animation: fadeIn 1.2s;
 }
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 100;
+  background: linear-gradient(90deg, #1E90FF 60%, #8f5cff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 2rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.22);
+  transition: background 0.2s, transform 0.2s, opacity 0.2s;
+  opacity: 0.85;
+}
+#scrollTopBtn:hover {
+  background: linear-gradient(90deg, #8f5cff 60%, #1E90FF 100%);
+  transform: scale(1.08);
+  opacity: 1;
+}
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(.77,0,.18,1), transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
