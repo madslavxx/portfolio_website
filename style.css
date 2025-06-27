@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 /* =====================
    Typography & Headings
    ===================== */
@@ -46,10 +48,15 @@ a:hover {
 .container {
   max-width: 900px;
   margin: 48px auto;
-  padding: 32px;
-  background: linear-gradient(135deg, rgba(34, 19, 51, 0.85) 60%, rgba(26, 11, 46, 0.85) 100%);
-  border-radius: 18px;
-  box-shadow: 0 4px 32px 0 rgba(30, 26, 43, 0.18);
+  padding: 40px 32px 32px 32px;
+  background: linear-gradient(135deg, rgba(34, 19, 51, 0.92) 60%, rgba(26, 11, 46, 0.92) 100%);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px 0 rgba(30, 26, 43, 0.22);
+  transition: box-shadow 0.2s;
+}
+
+.container:hover {
+  box-shadow: 0 12px 48px 0 rgba(30, 26, 43, 0.32);
 }
 
 body > h1, body > p, body > h2, body > h3 {
@@ -76,17 +83,19 @@ nav ul li {
 
 nav ul li a {
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
-  padding: 8px 18px;
-  border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  padding: 10px 22px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.08);
 }
 
 nav ul li a:hover, nav ul li a:focus {
-  background: #1E90FF;
+  background: linear-gradient(90deg, #1E90FF 60%, #8f5cff 100%);
   color: #fff;
   text-decoration: none;
+  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.18);
 }
 
 /* =====================
@@ -96,27 +105,48 @@ nav ul li a:hover, nav ul li a:focus {
 #featured-projects > div {
   display: flex;
   align-items: center;
-  background: linear-gradient(135deg, rgba(30, 26, 43, 0.7) 60%, rgba(17, 7, 31, 0.7) 100%);
-  border-radius: 12px;
-  margin: 18px 0;
-  padding: 18px;
-  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.10);
-  transition: transform 0.15s;
+  background: linear-gradient(135deg, rgba(30, 26, 43, 0.85) 60%, rgba(17, 7, 31, 0.85) 100%);
+  border-radius: 16px;
+  margin: 24px 0;
+  padding: 24px;
+  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.14);
+  transition: transform 0.18s, box-shadow 0.18s;
+  position: relative;
+  overflow: hidden;
 }
 
 #featured-projects > div:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 6px 24px 0 rgba(30, 26, 43, 0.18);
+  transform: translateY(-6px) scale(1.025);
+  box-shadow: 0 10px 32px 0 rgba(30, 26, 43, 0.22);
+  background: linear-gradient(135deg, rgba(30, 26, 80, 0.95) 60%, rgba(17, 7, 60, 0.95) 100%);
 }
 
 #featured-projects img {
-  margin-right: 28px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.15);
+  margin-right: 32px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px 0 rgba(30, 26, 43, 0.18);
+  border: 2px solid #1E90FF;
+  background: #fff;
+  transition: transform 0.2s;
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+}
+
+#featured-projects > div:hover img {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: #8f5cff;
 }
 
 #featured-projects h3 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-size: 1.25rem;
+  color: #8f5cff;
+}
+
+#featured-projects p {
+  color: #e0e0f0;
+  margin-bottom: 0;
 }
 
 /* =====================
@@ -124,11 +154,11 @@ nav ul li a:hover, nav ul li a:focus {
    ===================== */
 
 #skills-experience ul {
-  background: linear-gradient(135deg, rgba(30, 26, 43, 0.7) 60%, rgba(17, 7, 31, 0.7) 100%);
-  border-radius: 10px;
-  padding: 24px 36px;
-  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.10);
-  margin-top: 18px;
+  background: linear-gradient(135deg, rgba(30, 26, 43, 0.85) 60%, rgba(17, 7, 31, 0.85) 100%);
+  border-radius: 14px;
+  padding: 28px 40px;
+  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.14);
+  margin-top: 24px;
   display: flex;
   flex-wrap: wrap;
   gap: 18px 32px;
@@ -138,25 +168,25 @@ nav ul li a:hover, nav ul li a:focus {
 }
 
 #skills-experience li {
-  background: linear-gradient(135deg, rgba(60, 40, 90, 0.85) 60%, rgba(34, 19, 51, 0.85) 100%);
-  border-radius: 8px;
-  padding: 16px 22px;
+  background: linear-gradient(135deg, rgba(60, 40, 90, 0.92) 60%, rgba(34, 19, 51, 0.92) 100%);
+  border-radius: 10px;
+  padding: 18px 26px;
   margin: 0;
-  font-size: 1.08rem;
+  font-size: 1.12rem;
   min-width: 220px;
-  box-shadow: 0 1px 4px 0 rgba(30, 26, 43, 0.10);
-  transition: transform 0.15s, box-shadow 0.15s;
-  border-left: 4px solid #1E90FF;
+  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.12);
+  transition: transform 0.18s, box-shadow 0.18s;
+  border-left: 5px solid #1E90FF;
 }
 
 #skills-experience li:hover {
-  transform: translateY(-3px) scale(1.03);
-  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.18);
-  border-left: 4px solid #fff;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 6px 20px 0 rgba(30, 26, 43, 0.22);
+  border-left: 5px solid #8f5cff;
 }
 
 #skills-experience strong {
-  color: #1E90FF;
+  color: #8f5cff;
   font-weight: 700;
 }
 
@@ -165,22 +195,38 @@ nav ul li a:hover, nav ul li a:focus {
    ===================== */
 
 #contact ul {
-  background: linear-gradient(135deg, rgba(30, 26, 43, 0.7) 60%, rgba(17, 7, 31, 0.7) 100%);
-  border-radius: 10px;
-  padding: 18px 28px;
-  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.10);
-  margin-top: 18px;
+  background: linear-gradient(135deg, rgba(30, 26, 43, 0.85) 60%, rgba(17, 7, 31, 0.85) 100%);
+  border-radius: 14px;
+  padding: 22px 32px;
+  box-shadow: 0 4px 16px 0 rgba(30, 26, 43, 0.14);
+  margin-top: 24px;
 }
 
 #contact li {
-  background: linear-gradient(135deg, rgba(60, 40, 90, 0.85) 60%, rgba(34, 19, 51, 0.85) 100%);
-  border-radius: 8px;
-  padding: 12px 18px;
-  margin: 0 0 10px 0;
-  font-size: 1.08rem;
+  background: linear-gradient(135deg, rgba(60, 40, 90, 0.92) 60%, rgba(34, 19, 51, 0.92) 100%);
+  border-radius: 10px;
+  padding: 14px 22px;
+  margin: 0 0 12px 0;
+  font-size: 1.12rem;
   min-width: 220px;
-  box-shadow: 0 1px 4px 0 rgba(30, 26, 43, 0.10);
-  border-left: 4px solid #1E90FF;
+  box-shadow: 0 2px 8px 0 rgba(30, 26, 43, 0.12);
+  border-left: 5px solid #1E90FF;
+  transition: border-color 0.2s;
+}
+
+#contact li:hover {
+  border-left: 5px solid #8f5cff;
+}
+
+#contact a {
+  color: #1E90FF;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+#contact a:hover {
+  color: #8f5cff;
+  text-decoration: underline;
 }
 
 /* =====================
@@ -190,24 +236,75 @@ nav ul li a:hover, nav ul li a:focus {
 body {
   background: linear-gradient(135deg, #11071F 0%, #1A0B2E 100%);
   color: #FFFFFF;
-  font-family: 'Segoe UI', 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'Montserrat', 'Segoe UI', 'Arial', sans-serif;
+  line-height: 1.7;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 header {
   background: rgba(30, 26, 43, 0.98);
-  box-shadow: 0 2px 12px 0 rgba(30, 26, 43, 0.2);
-  padding: 28px 0 18px 0;
+  box-shadow: 0 2px 16px 0 rgba(30, 26, 43, 0.22);
+  padding: 32px 0 22px 0;
   margin: 0;
-  width: 100vw;
+  width: 100%;
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  left: 0;
+  right: 0;
+  margin-left: 0;
+  margin-right: 0;
   box-sizing: border-box;
+  z-index: 10;
+}
+
+/* =====================
+   Hero Section
+   ===================== */
+
+#home {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-top: 48px;
+  margin-bottom: 0;
+  background: linear-gradient(90deg, #1E90FF 30%, #8f5cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 18px;
+  color: #b3b3ff;
+  letter-spacing: 1px;
+  animation: fadeIn 1.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+body > p {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #e0e0f0;
+  margin-bottom: 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: fadeIn 1.5s;
 }
 
 /* =====================
@@ -216,11 +313,12 @@ header {
 
 @media (max-width: 700px) {
   .container {
-    padding: 12px 4vw;
+    padding: 12px 2vw;
   }
   #featured-projects > div {
     flex-direction: column;
     align-items: flex-start;
+    padding: 16px;
   }
   #featured-projects img {
     margin: 0 0 12px 0;
@@ -228,4 +326,16 @@ header {
     max-width: 320px;
     height: auto;
   }
+  #home {
+    font-size: 2.1rem;
+    margin-top: 28px;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* Subtle fade-in for all containers */
+.container, #featured-projects > div, #skills-experience ul, #contact ul {
+  animation: fadeIn 1.2s;
 }
